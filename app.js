@@ -23,7 +23,7 @@ const factorial = require("./factorial");
 // }
 
 // slow()
-const factorial1 = require("./factorial");
+const factorial = require("./factorial");
 
 const compute = (array) => {
   const arr = [];
@@ -47,6 +47,7 @@ const main = () => {
   performance.mark("end");
 
   performance.measure("main", "start", "end");
+	console.log(performance.getEntriesByName("main").pop());
 };
 
 main();
